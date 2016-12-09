@@ -117,6 +117,16 @@ find "/tmp/$TP_DIR" -type d -name 'obj' | xargs rm -rf
 
 echo "Removed"
 
+echo "Removing the .vs files"
+find "/tmp/$TP_DIR" -type d -name '.vs' | xargs rm -rf
+
+echo "Removed"
+
+echo "Removing the .git folder"
+find "/tmp/$TP_DIR" -type d -name '.git' | xargs rm -rf
+
+echo "Removed"
+
 echo "Moving the files inside $DIR_NAME"
 mv "/tmp/$TP_DIR" "/tmp/$DIR_NAME"
 echo "Moved"
