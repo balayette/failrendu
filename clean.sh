@@ -127,6 +127,9 @@ find "/tmp/$TP_DIR" -type d -name '.git' | xargs rm -rf
 
 echo "Removed"
 
+echo "Removing .userprefs files"
+find "/tmp/$TP_DIR" -type f -name '*.userprefs' | xargs rm
+
 echo "Moving the files inside $DIR_NAME"
 mv "/tmp/$TP_DIR" "/tmp/$DIR_NAME"
 echo "Moved"
